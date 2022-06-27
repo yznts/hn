@@ -1,0 +1,37 @@
+{{ define "CFeedStory" }}
+<div class="rounded-lg flex flex-wrap items-center justify-end md:justify-between">
+    <div class="w-full md:w-auto flex items-center">
+        {{ if .Index }}
+            <div class="opacity-0 lg:opacity-100 pr-2 text-center text-xl font-light text-gray-500" style="min-width: 40px;">
+                {{ .Index }}
+            </div>
+        {{ end }}
+        <div>
+            <div class="flex gap-4 text-sm">
+                <div class="dark:text-gray-300">{{ .User }}</div>
+                <div class="text-gray-500">{{ .Time }}</div>
+            </div>
+            <div class="mt-0.5">
+                <a href="{{ .URL }}" target="_blank" class="dark:text-gray-300 dark:hover:text-white">{{ .Title }}</a>
+            </div>
+            <div class="mt-0.5 text-sm">
+                <a href="{{ .URL }}" target="_blank" class="text-blue-500">{{ .URLFmt }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="flex">
+        <div class="flex items-center justify-end gap-1 dark:text-gray-300 dark:hover:text-white" style="min-width: 65px;">
+            <div class="text-xs">{{ .Points }}</div>
+            <div>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+            </div>
+        </div>
+        <a href="/story/{{ .ID }}" class="flex items-center justify-end gap-1 dark:text-gray-300 dark:hover:text-white" style="min-width: 65px;">
+            <div class="text-xs">{{ .Comments }}</div>
+            <div>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+            </div>
+        </a>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,39 @@
+{{ define "CFeedComment" }}
+<div {{ state . }} name="CFeedComment" class="pl-3 border-l dark:border-blue-600 dark:text-white">
+    <!-- Topbar -->
+    <div class="">{{ .User }}</div>
+    <!-- Content -->
+    <div class="mt-2 comment-wysiwyg text-sm dark:text-gray-300 overflow-hidden">
+        {{ .Text }}
+    </div>
+    <div class="mt-4 flex items-center justify-between">
+        <!-- Left -->
+        <div>
+            {{ if ne (len .NestedIDs) 0 }}
+            <button onclick="Action(this, 'ToggleNested')" class="flex items-center gap-1 text-sm text-blue-500">
+                <svg class="w-4 h-4 {{ if not .Nested }} -rotate-90 {{ end }}" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                {{ len .NestedIDs }}
+                more
+                <svg class="ml-2 h-5 w-5 animate-spin hidden" ssa:oncall.display="block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+            </button>
+            {{ end }}
+        </div>
+        <!-- Right -->
+        <div></div>
+    </div>
+    <!-- Nested -->
+    {{ if .Nested }}
+        <div>
+            {{ template "CFeedComments" await .Nested }}
+        </div>
+    {{ end }}
+</div>
+<style>
+.comment-wysiwyg a {
+    color: rgba(59, 130, 246, 1);
+}
+</style>
+{{ end }}

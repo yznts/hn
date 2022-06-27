@@ -1,0 +1,11 @@
+{{ define "CFeedComments" }}
+<div class="rounded-lg">
+    {{ range .Comments }}
+        {{ if ne (await .).Deleted true }}
+            <div class="py-2">
+                {{ template "CFeedComment" (await .) }}
+            </div>
+        {{ end }}
+    {{ end }}
+</div>
+{{ end }}

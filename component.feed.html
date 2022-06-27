@@ -1,0 +1,16 @@
+{{ define "CFeed" }}
+<div {{ state . }} name="CFeed" class="flex flex-col gap-2">
+    {{ range .Stories }}
+        <div class="py-2">
+            {{ template "CFeedStory" await . }}
+        </div>
+    {{ end }}
+    {{ if lt (len .Stories) 480 }}
+        <div class="py-2 flex items-center justify-center">
+            <button onclick="#" class="text-blue-500">
+                Load more ...
+            </button>
+        </div>
+    {{ end }}
+</div>
+{{ end }}
