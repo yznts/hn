@@ -27,3 +27,4 @@ COPY --from=build /src/static/dist /app/static/dist
 
 # Entrypoint
 ENTRYPOINT PORT=25025 ./hn
+
