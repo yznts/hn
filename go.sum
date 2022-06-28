@@ -1,5 +1,7 @@
 github.com/kyoto-framework/kyoto v1.0.1 h1:IxL1/lHIpq5dp9ovsRFKba9KpNc7NvsGnXu6fd3euU8=
 github.com/kyoto-framework/kyoto v1.0.1/go.mod h1:5dFhfB0/ioV7spTmhHZCEZSBLj8UQ4WaUshMZ0uWLqE=
+github.com/kyoto-framework/kyoto v1.0.2 h1:wyR0HXSzW1xINZ3ngMKFlhpgl+4YJif3PMESDY1zs9o=
+github.com/kyoto-framework/kyoto v1.0.2/go.mod h1:5dFhfB0/ioV7spTmhHZCEZSBLj8UQ4WaUshMZ0uWLqE=
 github.com/kyoto-framework/zen v0.0.0-20220622150729-c4644143bbc4 h1:DzRg68WWE5Duxf6IHWIEZex5eld7iRNHJdQ9XcFFHAQ=
 github.com/kyoto-framework/zen v0.0.0-20220622150729-c4644143bbc4/go.mod h1:MLXuSpmhQdT6PSqYQHcNPUBEfSGbMggeJKICBmMZfq4=
 golang.org/x/exp v0.0.0-20220328175248-053ad81199eb h1:pC9Okm6BVmxEw76PUu0XUbOTQ92JX11hfvqTjAV3qxM=

@@ -3,7 +3,7 @@ module github.com/yuriizinets/hn
 go 1.18
 
 require (
-	github.com/kyoto-framework/kyoto v1.0.1
+	github.com/kyoto-framework/kyoto v1.0.2
 	github.com/kyoto-framework/zen v0.0.0-20220622150729-c4644143bbc4
 )
 

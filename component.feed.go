@@ -30,8 +30,6 @@ func CFeed(category, query string) func(*kyoto.Context) CFeedState {
 
 		// Action state preload
 		kyoto.ActionPreload(ctx, &state)
-		// Handle actions
-		// ...
 
 		// Determine load frame
 		frame := [2]int{len(state.Stories), len(state.Stories) + 30}
